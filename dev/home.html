@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Главная</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500,600,700" rel="stylesheet" />
+</head>
+<body>
+	<header class="header">
+		<div class="header__container">
+			<div class="header__logo">
+				<img src="img/logo.png" alt="">
+			</div>
+			<ul id="headerMain" class="header__main">
+				<li class="header__item"><a href="">Почему мы?</a></li>
+				<li class="header__item"><a href="">О сервисе</a></li>
+				<li class="header__item"><a href="">Вопросы-ответы</a></li>
+			</ul>
+			<a id="headerButton" class="header__button">вход в личный кабинет</a>
+			<div onclick="showBurger()" id="headerBurger" class="header__burger">
+				<div></div>
+			</div>
+		</div>
+	</header>
+	<div class="offer__container">
+		<div class="offer__info">
+			<div class="offer__subtitle">
+				Горячие предложения
+			</div>
+			<div class="offer__title">
+				быстрых займов по всей России! 
+			</div>
+			<div class="offer__text">
+				Без проверки кредитной истории.
+				От 1 000 ₽ за 15 минут.
+			</div>
+			<div class="offer__subtext">
+				Внимание! Услуга обработки заявки платная 
+				и составляет от 98 ₽ до 398 ₽ раз в неделю
+			</div>
+		</div>
+		<div class="offer__form">
+			<div class="form__body">
+				<div class="form__sum">
+					Cумма кредита
+				</div>
+				<div class="range">
+					<div class="sliderValue">
+						<span id="valueMoney"></span>
+					</div>
+					<div class="slider__money">
+						<div id="progressbar" class="slider-money__progressbar"></div>
+						<div class="value left">1000 ₽</div>
+						<input id="sliderMoney" type="range" min="1000" max="100000" value="50%" steps="1000">
+						<div class="value right">100 000 ₽</div>
+					</div>
+				</div>
+				<div class="form__term">
+					Cрок кредита
+				</div>
+				<div class="range">
+					<div class="sliderValue">
+						<span id="valueTime"></span>
+					</div>
+					<div class="slider__time">
+						<div id="progressbarTime" class="slider-time__progressbar"></div>
+						<div class="value left">3 </div>
+						<input id="sliderTime" type="range" min="3" max="30" value="50%" steps="1">
+						<div class="value right">30</div>
+					</div>
+				</div>
+				<a class="form__button __button">
+					<p>Оформить заявку</p>
+				</a>
+				<div class="form__info">
+					<div class="form__item">
+						<div class="form-item__name">
+							Вы берете
+						</div>
+						<div id="startAmount" class="form-item__value">50 000 ₽</div>
+					</div>
+					<div class="form__item">
+						<div class="form-item__name">
+							К возврату
+						</div>
+						<div id="finalAmount" class="form-item__value">
+							61 900 ₽
+						</div>
+					</div>
+					<div class="form__item">
+						<div class="form-item__name">
+							Дата возврата
+						</div>
+						<div id="returnDate" class="form-item__value">
+							17 января 2022
+						</div>
+					</div>
+					<div class="form__item">
+						<div class="form-item__name">
+							Ежемесячный платеж
+						</div>
+						<div id="monthlyPayment" class="form-item__value">
+							11 900 ₽
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>

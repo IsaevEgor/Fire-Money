@@ -1,0 +1,284 @@
+.offer__container{
+	position: relative;
+	top: 158px;
+	z-index: 1;
+	max-width: 1310px;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: flex;
+	justify-content: space-between;
+
+	@media (max-width: 1250px) {
+		flex-wrap: wrap;
+		top: 123px;
+	}
+	@media (max-width: 768px) {
+		top: 70px;
+	}
+}
+.offer__info {
+	flex: 0 1 50%;
+	padding-right: 15px;
+
+	@media (max-width: 1250px) {
+		flex: 0 1 100%;
+	}
+}
+.offer__subtitle {
+	max-width: 382px;
+	position: relative;
+	padding: 15px 23px 15px 75px;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 118%;
+	text-transform: uppercase;
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(12px);
+	border-radius: 12px;
+	margin-top: 72px;
+	margin-bottom: 20px;
+
+	@media (max-width: 1250px) {
+		margin: 0 auto;
+		margin-bottom: 25px;
+	}
+	@media (max-width: 768px) {
+		font-size: 20px;
+	}
+}
+.offer__subtitle::before{
+	content: url(../img/offer/fire-icon.png);
+	position: absolute;
+	top: -10px;
+	left: 10px;
+	width: 44px;
+	height: 54px;
+}
+.offer__title {
+	max-width: 477px;
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 111.5%;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 15px;
+
+	@media (max-width: 1250px) {
+		max-width: 100%;
+		text-align: center;
+		margin-bottom: 5px;
+		font-size: 40px;
+	}
+	@media (max-width: 992px) {
+		font-size: 39px;
+	}
+	@media (max-width: 768px) {
+		font-size: 36px;
+	}
+	@media (max-width: 540px) {
+		font-size: 32px;
+	}
+}
+.offer__text {
+	max-width: 457px;
+	font-weight: 400;
+	font-size: 27px;
+	line-height: 133.5%;
+	color: #FFFFFF;
+	margin-bottom: 110px;
+
+	@media (max-width: 1250px) {
+		max-width: 100%;
+		text-align: center;
+		line-height: 111.5%;
+		margin-bottom: 10px;
+	}
+	@media (max-width: 992px) {
+		font-size: 25px;
+	}
+}
+.offer__subtext {
+	max-width: 300px;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 145.5%;
+	color: #FFFFFF;
+
+	@media (max-width: 1250px) {
+		max-width: 100%;
+		text-align: center;
+		margin-bottom: 35px;
+	}
+}
+.offer__form {
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	flex: 0 1 50%;
+	
+	@media (max-width: 1250px) {
+		flex: 0 1 100%;
+	}
+	@media (max-width: 767px) {
+		justify-content: center;
+	}
+}
+.offer__form::before{
+	content: url(../img/offer/women.png);
+	position: absolute;
+	left: -240px;
+	top: -100px;
+
+	@media (max-width: 1250px) {
+		left: -125px;
+		top: -130px;
+	}
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+.form__body {
+	width: 428px;
+	height: 582px;
+	padding: 30px;
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.05);
+	border-radius: 15px;
+	@media (max-width: 540px) {
+		width: 330px;
+	}
+}
+.form__sum {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	color: #45515F;
+	margin-bottom: 46px;
+}
+.form__slider {
+	position: relative;
+	margin-bottom: 70px;
+}
+
+.form__term {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	color: #45515F;
+	margin-bottom: 60px;
+}
+.form__button {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 60px;
+}
+.form__info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-left: 40px;
+}
+.form__item {
+	flex: 0 1 50%;
+	margin-bottom: 20px;
+}
+.form-item__name {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 17px;
+	color: #45515F;
+}
+.form-item__value {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	color: #F28925;
+}
+//=======================================================================
+.range{
+	height: 7px;
+	width: 100%;
+	background: #ECECEC;
+	border-radius: 8px;
+	margin-bottom: 50px;
+  }
+  .sliderValue{
+	position: relative;
+	width: 100%;
+  }
+  .sliderValue span{
+	position: absolute;
+	height: 45px;
+	width: 90px;
+	transform: translateX(-100%) scale(1);
+	font-weight: 700;
+	top: -35px;
+	font-size: 20px;
+	line-height: 24px;
+	z-index: 2;
+	color: #45515F;
+	transform-origin: bottom;
+	transition: transform 0.3s ease-in-out;
+  }
+  .slider__money,
+  .slider__time{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	position: relative;
+  }
+  .slider__money .value,
+  .slider__time .value{
+	position: absolute;
+	font-size: 13px;
+	line-height: 15px;
+	color: #C0C2C5;
+	font-weight: 400;
+	bottom: -20px;
+  }
+  .slider__money .value.left,
+  .slider__time .value.left{
+	left: 0px;
+  }
+  .slider__money .value.right,
+  .slider__time .value.right{
+	right: 0px;
+  }
+  .slider-money__progressbar,
+  .slider-time__progressbar{
+	position: absolute;
+	width: 50%;
+	left: 0;
+	height: 7px;
+	background: linear-gradient(81.55deg, #FFC83E 33.93%, #FF9F47 73.78%);
+	border-radius: 8px;
+  }
+  .range input{
+	-webkit-appearance: none;
+	width: 100%;
+	height: 3px;
+	background: transparent;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	z-index: 2222;
+  }
+  .range input::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: url(../img/offer/range.png);
+	cursor: pointer;
+  }
+  .range input::-moz-range-thumb{
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	background: red;
+	border-radius: 50%;
+	background: #664AFF;
+	border: 1px solid #664AFF;
+	cursor: pointer;
+  }

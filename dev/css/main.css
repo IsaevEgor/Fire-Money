@@ -340,8 +340,8 @@
 }
 .best-offer-money__check-point {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 33.333%;
-  flex: 0 1 33.333%;
+  -ms-flex: 0 1 25%;
+  flex: 0 1 25%;
   position: relative;
   max-width: 195px;
   text-align: center;
@@ -349,10 +349,14 @@
 }
 @media (max-width:767px) {
   .best-offer-money__check-point {
+    height: 100%;
     text-align: start;
     top: 0;
     right: -90px
   }
+}
+.__third {
+  padding-left: 30px
 }
 .__first::before {
   content: url(../img/best-offer/first-icon.png);
@@ -362,7 +366,7 @@
 }
 @media (max-width:767px) {
   .__first::before {
-    top: 20px;
+    top: 10px;
     left: -150px
   }
 }
@@ -383,7 +387,7 @@
 }
 @media (max-width:767px) {
   .__first::after {
-    top: 60px;
+    top: 48px;
     left: -70px
   }
 }
@@ -395,8 +399,8 @@
 }
 @media (max-width:767px) {
   .__second::before {
-    top: 20px;
-    left: -145px
+    top: 25px;
+    left: -140px
   }
 }
 .__second::after {
@@ -416,7 +420,7 @@
 }
 @media (max-width:767px) {
   .__second::after {
-    top: 60px;
+    top: 40px;
     left: -67px
   }
 }
@@ -424,19 +428,19 @@
   content: url(../img/best-offer/third-icon.png);
   position: absolute;
   top: -103px;
-  left: 62px
+  left: 82px
 }
 @media (max-width:767px) {
   .__third::before {
-    top: 20px;
-    left: -133px
+    top: 25px;
+    left: -128px
   }
 }
 .__third::after {
   content: "3";
   position: absolute;
   top: -15px;
-  left: 75px;
+  left: 91px;
   padding: 6px;
   width: 35px;
   height: 35px;
@@ -449,7 +453,7 @@
 }
 @media (max-width:767px) {
   .__third::after {
-    top: 60px;
+    top: 50px;
     left: -53px
   }
 }
@@ -461,8 +465,8 @@
 }
 @media (max-width:767px) {
   .__fourth::before {
-    top: 20px;
-    left: -150px
+    top: 40px;
+    left: -145px
   }
 }
 .__fourth::after {
@@ -528,6 +532,7 @@
 }
 .__button--no_bg {
   position: relative;
+  max-width: 273px;
   padding: 20px 30px;
   border: 1px solid #c9d2dd;
   border-radius: 8px;
@@ -538,7 +543,8 @@
   line-height: 118%;
   text-transform: uppercase;
   color: #45515f;
-  cursor: pointer
+  cursor: pointer;
+  text-align: center
 }
 .__button--no_bg p {
   position: relative;
@@ -1216,6 +1222,12 @@ h6 {
   justify-content: space-between;
   padding-left: 40px
 }
+@media (max-width:540px) {
+  .form__info {
+    padding-left: 0;
+    padding: 10px
+  }
+}
 .form__item {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 50%;
@@ -1462,8 +1474,19 @@ h6 {
     flex-wrap: wrap
   }
 }
+.select__button {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%
+}
 .select__button:not(:last-child) {
   margin-right: 10px
+}
+@media (max-width:767px) {
+  .select__button:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px
+  }
 }
 .ways {
   padding-top: 150px

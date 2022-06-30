@@ -6,13 +6,23 @@ function resizeWindow() {
 	const clientWidth = document.documentElement.clientWidth;
 	const headerButton = document.getElementById("headerButton");
 	const headerMain = document.getElementById("headerMain");
+	const footerMain = document.getElementById("footerMain");
+	const footerMenu = document.getElementById("footerMenu");
+	const footerLogo = document.getElementById("footerLogo");
+	
 
 
 	if (clientWidth <= 992 && resizeTablet) {
 		headerButton.innerHTML = "вход в кабинет";
+		footerMain.insertAdjacentHTML("afterEnd", footerMenu.outerHTML);
+		footerMenu.outerHTML = "";
+
 		resizeTablet = false;
 	} else if (clientWidth > 992 ) {
 		resizeTablet = true;
+
+		footerLogo.insertAdjacentHTML("afterEnd", footerMenu.outerHTML);
+		footerMenu.outerHTML = "";
 		headerButton.innerHTML = "вход в личный кабинет";
 	}
 	 if (clientWidth < 380 && !resizeMobile) {

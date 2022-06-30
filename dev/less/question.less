@@ -1,0 +1,95 @@
+.question {
+	background-color: #F6F9FC;
+	cursor: default;
+}
+.question__container {
+	max-width: 1310px;
+	margin: 0 auto;
+	padding: 59px 15px 69px;
+	
+	@media (max-width: 767px) {
+		padding: 35px 15px;
+	}
+}
+.question__title {
+	font-weight: 600;
+	font-size: 38px;
+	line-height: 118%;
+	color: #45515F;
+	text-align: center;
+	margin-bottom: 37px;
+}
+.question__spoiler-body {
+	
+}
+.question__spoiler-item {
+	background: rgba(255, 255, 255, 0.95);
+	box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+	border-radius: 12px;
+
+}
+.question__spoiler-item:not(:last-child){
+	margin-bottom: 5px;
+}
+.question-spoiler-item__input{
+	appearance: none;
+	width: 0;
+	height: 0;
+	position: absolute;
+
+}
+.question-spoiler-item__input:checked ~ .question-spoiler-item__text{
+	display: block;
+	background: linear-gradient(268.87deg, #FFC83E -5.09%, #FF7347 51.96%);
+	border-radius: 0 0 12px 12px;
+	
+}
+.question-spoiler-item__input:checked ~ .question-spoiler-item__title{
+	background: linear-gradient(268.87deg, #FFC83E -5.09%, #FF7347 51.96%);
+	border-radius: 12px 12px 0 0;
+	color: #FFFFFF;
+	
+}
+.question-spoiler-item__input:checked ~ .question-spoiler-item__title::after{
+	content: url(/img/question/arrow\ top.png);
+}
+.question-spoiler-item__title {
+	position: relative;
+	-webkit-user-select: none;
+	display: block;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 118%;
+	color: #45515F;
+	padding: 22px 60px 22px 33px;
+	cursor: pointer;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent;
+
+	@media (max-width: 767px) {
+		font-size: 16px;
+	}
+}
+.question-spoiler-item__title::after{
+	content: url(/img/question/arrow\ botom.png);
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	transform: translateY(-50%);
+}
+.question-spoiler-item__title:hover{
+	background: linear-gradient(268.87deg, #FFC83E -5.09%, #FF7347 51.96%);
+	border-radius: 12px;
+	color: #fff;
+}
+.question-spoiler-item__text {
+	display: none;
+	padding: 0 33px 22px 33px;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 118%;
+	color: #FFFFFF;
+	@media (max-width: 767px) {
+		font-size: 14px;
+	}
+}

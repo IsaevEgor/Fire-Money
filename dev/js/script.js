@@ -43,9 +43,11 @@ window.addEventListener("resize", resizeWindow)
 function showBurger() {
 	const headerBurger = document.getElementById("headerBurger");
 	const headerMain = document.getElementsByClassName("header__main")
+	const body = document.querySelector("body");
 	
 	headerBurger.classList.toggle("active");
 	headerMain[0].classList.toggle("active");
+	body.classList.toggle("active");
 }
 
 
@@ -81,10 +83,12 @@ function showBurger() {
 		progressbar.style.width = time * 2.9 + "%"
 		valueTime.style.left = time * 3.7 + "%";
 		if (time <= 8) {
-			progressbar.style.width = time * 2.15 + "%"
+			progressbar.style.width = time * 2.35 + "%"
+		} if (time <= 4) {
+			progressbar.style.width = time * 1.8 + "%"
 		} if (time > 15) {
 			progressbar.style.width = time * 3.2 + "%"
-		} if ((time/1000) > 89) {
+		} if (time > 89) {
 			valueTime.style.left = 105 + "%"
 		} if (time <= 6) {
 			valueTime.style.left = 24 + "%";

@@ -699,6 +699,11 @@
   margin: 0 auto;
   padding: 50px 15px 41px
 }
+@media (max-width:767px) {
+  .container {
+    padding: 30px 15px 25px
+  }
+}
 .footer__main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -763,6 +768,9 @@
     font-size: 16px
   }
 }
+.footer__item:hover {
+  text-decoration: underline
+}
 .footer__item:not(:last-child) {
   margin-right: 60px
 }
@@ -786,6 +794,9 @@
     order: 3
   }
 }
+.footer__mail:hover {
+  text-decoration: underline
+}
 .footer__mail::before {
   content: url(../img/footer/mail-icon.svg);
   position: absolute;
@@ -808,11 +819,23 @@
     margin-bottom: 24px
   }
 }
+.footer__phone:hover {
+  text-decoration: underline
+}
 .footer__phone a::before {
   content: url(../img/footer/phone-icon.svg);
   position: absolute;
   top: 0;
   left: 0
+}
+.footer__spoiler-item,
+.footer__spoiler-item_2 {
+  -webkit-transition: .3s ease;
+  transition: .3s ease
+}
+.footer__spoiler-item:hover,
+.footer__spoiler-item_2:hover {
+  background-color: rgba(255,255,255,.123)
 }
 .footer-spoiler-item__input {
   -webkit-appearance: none;
@@ -832,7 +855,9 @@
   text-transform: uppercase;
   color: #fff;
   padding-left: 35px;
-  cursor: pointer
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+  -webkit-tap-highlight-color: transparent
 }
 @media (max-width:992px) {
   .footer-spoiler-item__title {
@@ -841,7 +866,12 @@
 }
 @media (max-width:767px) {
   .footer-spoiler-item__title {
-    padding: 20px 0 25px 30px
+    padding: 20px 0 20px 30px
+  }
+}
+@media (max-width:525px) {
+  .footer-spoiler-item__title {
+    text-align: center
   }
 }
 .footer-spoiler-item__text {
@@ -863,15 +893,16 @@
   border-bottom: 1px solid rgba(255,255,255,.2)
 }
 .footer-spoiler-item__input:checked ~ .footer-spoiler-item__text {
+  border-top: 1px solid rgba(255,255,255,.2);
   display: block
 }
 .footer-spoiler-item__input:checked ~ .footer-spoiler-item__title::after {
-  content: url('/img/question/arrow\ top.png');
+  content: url(../img/footer/arrow.png);
   -webkit-transform: rotate(0);
   transform: rotate(0)
 }
 .footer-spoiler-item__title::after {
-  content: url('/img/question/arrow\ top.png');
+  content: url(../img/footer/arrow.png);
   position: absolute;
   top: 30px;
   left: 5px;
@@ -888,6 +919,11 @@
 @media (max-width:767px) {
   .footer-spoiler-item__title::after {
     top: 20px
+  }
+}
+@media (max-width:525px) {
+  .footer-spoiler-item__title::after {
+    left: 70px
   }
 }
 .footer__card {
@@ -975,7 +1011,9 @@
   padding: 33px 0;
   text-align: center;
   border: 1px solid #fff;
-  cursor: pointer
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+  -webkit-tap-highlight-color: transparent
 }
 .footer__card-data a {
   font-weight: 300;
@@ -1042,7 +1080,7 @@
 .footer__copy p::before {
   content: url(../img/footer/18.png);
   position: absolute;
-  top: 0;
+  top: 5px;
   left: -75px;
   -webkit-transform: translateY(-25%);
   transform: translateY(-25%)
@@ -1125,6 +1163,9 @@
 }
 .footer__icon:not(:last-child) {
   border-right: 1px solid rgba(255,255,255,.2)
+}
+body.active {
+  overflow: hidden
 }
 .header {
   position: absolute;
@@ -1220,7 +1261,8 @@
   }
 }
 .header__main.active {
-  position: absolute;
+  position: fixed;
+  overflow: scroll;
   z-index: 4;
   top: 116px;
   left: 0;
@@ -1230,6 +1272,8 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-transition: .3s ease;
   transition: .3s ease;
   border-top: 2px solid #fff;
@@ -1731,7 +1775,12 @@ h6 {
 }
 @media (max-width:540px) {
   .form__body {
-    width: 330px
+    max-width: 400px
+  }
+}
+@media (max-width:425px) {
+  .form__body {
+    max-width: 340px
   }
 }
 .form__sum {
@@ -1975,7 +2024,7 @@ h6 {
 }
 .question-spoiler-item__text {
   display: none;
-  padding: 0 33px 22px 33px;
+  padding: 10px 33px 22px 33px;
   font-weight: 300;
   font-size: 16px;
   line-height: 118%;
@@ -2215,7 +2264,7 @@ h6 {
 .ways__item::after {
   content: url(../img/ways/arrow.png);
   position: absolute;
-  left: 63px;
+  left: 55px;
   bottom: 20px
 }
 .ways__item:not(:last-child) {

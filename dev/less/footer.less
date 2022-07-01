@@ -10,6 +10,10 @@
 	max-width: 1310px;
 	margin: 0 auto;
 	padding: 50px 15px 41px;
+
+	@media (max-width: 767px) {
+		padding: 30px 15px 25px;
+	}
 }
 .footer__main {
 	display: flex;
@@ -52,6 +56,9 @@
 		font-size: 16px;
 	}
 }
+.footer__item:hover{
+	text-decoration: underline;
+}
 .footer__item:not(:last-child){
 	margin-right: 60px;
 
@@ -72,6 +79,9 @@
 
 	}
 }
+.footer__mail:hover{
+	text-decoration: underline;
+}
 .footer__mail::before{
 	content: url(../img/footer/mail-icon.svg);
 	position: absolute;
@@ -91,6 +101,9 @@
 		margin-bottom: 24px;
 	}
 }
+.footer__phone:hover{
+	text-decoration: underline;
+}
 .footer__phone a::before{
 	content: url(../img/footer/phone-icon.svg);
 	position: absolute;
@@ -98,8 +111,14 @@
 	left: 0;
 }
 
+.footer__spoiler-item_2,
 .footer__spoiler-item {
+	transition: 0.3s ease;
 
+}
+.footer__spoiler-item_2:hover,
+.footer__spoiler-item:hover{
+	background-color: rgba(255, 255, 255, 0.123);
 }
 .footer-spoiler-item__input {
 	appearance: none;
@@ -120,11 +139,17 @@
 	padding-left: 35px;
 	cursor: pointer;
 
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent;
+
 	@media (max-width: 992px) {
 		padding: 25px 0 25px 30px;
 	}
 	@media (max-width: 767px) {
-		padding: 20px 0 25px 30px;
+		padding: 20px 0 20px 30px;
+	}
+	@media (max-width: 525px) {
+		text-align: center;
 	}
 }
 .footer-spoiler-item__text {
@@ -147,15 +172,16 @@
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .footer-spoiler-item__input:checked ~ .footer-spoiler-item__text{
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
 	display: block;
 }
 .footer-spoiler-item__input:checked ~ .footer-spoiler-item__title::after{
-	content: url(/img/question/arrow\ top.png);
+	content: url(../img/footer/arrow.png);
 	transform: rotate(0);
 }
 
 .footer-spoiler-item__title::after{
-	content: url(/img/question/arrow\ top.png);
+	content: url(../img/footer/arrow.png);
 	position: absolute;
 	top: 30px;
 	left: 5px;
@@ -167,6 +193,9 @@
 	}
 	@media (max-width: 767px) {
 		top: 20px;
+	}
+	@media (max-width: 525px) {
+		left: 70px;
 	}
 }
 //================================================================
@@ -224,6 +253,9 @@
 	border: 1px solid #FFFFFF;
 	cursor: pointer;
 
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent;
+
 	a{
 		font-weight: 300;
 		font-size: 18px;
@@ -280,7 +312,7 @@
 .footer__copy p::before{
 	content: url(../img/footer/18.png);
 	position: absolute;
-	top: 0;
+	top: 5px;
 	left: -75px;
 	transform: translateY(-25%);
 }

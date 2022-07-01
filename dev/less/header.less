@@ -1,3 +1,7 @@
+body.active{
+	overflow: hidden;
+}
+
 .header{
 	position: absolute;
 	width: 100%;
@@ -66,13 +70,15 @@
 	}
 }
 .header__main.active{
-	position: absolute;
+	position: fixed;
+	overflow: scroll;
 	z-index: 4;
 	top: 116px;
 	left: 0;
 	height: 100%;
 	width: 100vw;
 	flex-direction: column;
+	flex-wrap: nowrap;
 	transition: 0.3s ease;
 	border-top: 2px solid #fff;
 	background-color: #ffb950;

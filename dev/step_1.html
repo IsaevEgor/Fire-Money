@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/c5b323e57d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header class="header-steps">
+		<div class="header-steps__container">
+			<div class="header-steps__logo">
+				<a href=""><img src="img/logo.png" alt=""></a>
+			</div>
+			<a id="stepsHeaderButton" href="" class="header-steps__button __header-button">
+				<p>вход в личный кабинет</p>
+			</a>
+		</div>
+	</header>
+	<div class="steps">
+		<div class="steps__container">
+			<div class="step__1">
+			<div class="step-1__title">
+				Для получения займа под 0%* 
+				<span>заполните заявку</span>
+			</div>
+			<div class="step-1__body">
+				<div class="step-1__timer-block">
+					<div class="step-1__timer-title">
+						<p>Поторопитесь, до окончания акционного предложения осталось</p>
+					</div>
+					<div class="step-1__timer">
+						<ul class="timer">
+							<li class="timer__item" id="hourFirst" class="">0</li>
+							<li class="timer__item" id="hourSecond" class="">0</li>
+							<li class="timer__item" id="minutesFirst" class="">0</li>
+							<li class="timer__item" id="minutesSecond" class="">0</li>
+						</ul>
+						<ul class="timer__name">
+							<li>Часа</li>
+							<li>Минут</li>
+						</ul>
+					</div>
+				</div>
+				<div class="step-1__slider">
+					<div class="step-1__item">
+						<div class="step-1__title-range">
+							Cрок кредита
+						</div>
+						<div class="range">
+							<div class="sliderValue">
+								<span class="show" id="valueMoney"></span>
+							</div>
+							<div class="slider__money">
+								<div id="progressbar" class="slider-money__progressbar"></div>
+								<div class="value left">1000 ₽</div>
+								<input id="sliderMoney" type="range" min="1000" max="100000" value="50%" steps="1000">
+								<div class="value right">100 000 ₽</div>
+							</div>
+						</div>
+					</div>
+					<div class="step-1__item">
+						<div class="step-1__title-range">
+							Сумма кредита
+						</div>
+						<div class="range">
+							<div class="sliderValue">
+								<span class="show" id="valueTime"></span>
+							</div>
+							<div class="slider__time">
+								<div id="progressbarTime" class="slider-time__progressbar"></div>
+								<div class="value left">3 </div>
+								<input id="sliderTime" type="range" min="3" max="30" value="50%" steps="1">
+								<div class="value right">30</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="step-1__info">
+					<div class="step-1-info__item">
+						<div class="step-1-info__name">
+							Вы берете
+						</div>
+						<div id="startAmount" class="step-1-info__value">50 000 ₽</div>
+					</div>
+					<div class="step-1-info__item">
+						<div class="step-1-info__name">
+							Дата возврата
+						</div>
+						<div id="returnDate" class="step-1-info__value">
+							17 января 2022
+						</div>
+					</div>
+					<div class="step-1-info__item">
+						<div class="step-1-info__name">
+							К возврату
+						</div>
+						<div id="finalAmount" class="step-1-info__value">
+							61 900 ₽
+						</div>
+					</div>
+					<div class="step-1-info__item">
+						<div class="step-1-info__name">
+							Ежемесячный платеж
+						</div>
+						<div id="monthlyPayment" class="step-1-info__value">
+							11 900 ₽
+						</div>
+					</div>
+				</div>
+				<div class="step-1__inputs-row">
+					<div class="step-1__inputs-item">
+						<label class="step-1__input-label" for="">Фамилия</label>
+						<input type="text">
+					</div>
+					<div class="step-1__inputs-item">
+						<label class="step-1__input-label" for="">Имя</label>
+						<input type="text">
+					</div>
+					<div class="step-1__inputs-item">
+						<label class="step-1__input-label" for="">Отчество</label>
+						<input type="text">
+					</div>
+				</div>
+				<div class="step-1__inputs-row">
+					<div class="step-1__inputs-item">
+						<label class="step-1__input-label" for="">Телефон</label>
+						<input type="tel" placeholder="+7 (9__) ___.__.__" id="phoneInput" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+					</div>
+					<div class="step-1__inputs-item">
+						<label class="step-1__input-label" for="">Дата рождения</label>
+						<div class="step-1__date-block">
+							<input type="date" id="dataMask">
+						</div>
+					</div>
+					<div class="step-1__inputs-item">
+						<div class="select">
+							<div class="select__header _icon-arrow">
+								<span class="select__current"></span>
+								<div class="select__icon"></div>
+							</div>
+						
+							<div class="select__body">
+								<div class="select__item">Москва</div>
+								<div class="select__item">Санкт Питербург</div>
+								<div class="select__item">Ростов-на-Дону</div>
+								<div class="select__item">Краснодар</div>
+								<div class="select__item">Ялта</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="step-1__checkbox-block">
+					<input type="checkbox" id="check">
+					<label for="check">Заполняя заявку на сайте вы даете согласие со следующими условиями: <a href="#">Политика обработки персональных данных , Публичная оферта и действующие тарифы , Согласие на обработку персональных данных , Соглашение с подпиской и Соглашение о хранении учетных данных владельца карт.</a>Стоимость услуги четыреста девяносто шесть руб. Списание производится раз в 5 дней. Настоящим подтверждаю, что не являюсь получателем единовременных и/или регулярных денежных выплат, предусмотренных Указами Президента РФ. 
+					</label>
+				</div>
+				<div class="step-1__step step__line">
+					<div class="step-line__title">
+						Шаг <span>1</span> из <span>7</span>
+					</div>
+					<div class="step-line__line">
+						<img src="img/steps_container/step_1/line.jpg" alt="line">
+						<div class="step-line__text">
+							<p>+10% к одобрению при заполнении этой формы</p>
+						</div>
+					</div>
+	
+					<a href="#" class="step-line__button __button">
+						<p>Продолжить</p>
+					</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer-steps">
+		<div class="footer-steps__container">
+			<div class="footer-steps__contact">
+				<button id="footerSpoiler" class="footer-steps__label "><p class="_icon-arrow">Внимание! Услуга обработки заявки платная</p></button>
+				<ul class="footer-steps__conact-link">
+					<li class="footer-steps__mail">
+						<a class="_icon-mail" href="mailto:Kustohelp@gmail.com?subject=Оформить заявку">Kustohelp@gmail.com</a>
+					</li>
+					<li class="footer-steps__phone">
+						<a class="_icon-phone" href="tel:8 800 808-00-80">8 800 808-00-80</a>
+					</li>
+				</ul>
+			</div>
+			<div id="spoilerItem" class="footer-steps__spoiler">
+				<ul class="footer-steps-spoiler__item">
+					<li><a class="footer-steps-spoiler__item-link" href="">ООО "МКК СКОРФИН", 344101, г. Ростов-на-Дону, ул. Портовая, д. 193, оф. 302, Лицензия № 1703020008232, ИНН 3664223480, ОГРН 1163668109428, процентная ставка 0,99% в день</a><br></li> 
+					<li><a class="footer-steps-spoiler__item-link" href="">ООО МФК "Быстроденьги", 123290 г. Москва, 1-й Магистральный туп., д.11 стр.10, Лицензия № 2110573000002, ИНН 7325081622, ОГРН 1087325005899, процентная ставка 0% в день</a> <br></li>
+					<li><a class="footer-steps-spoiler__item-link" href="">ООО "МКК КАНГАРИЯ", 344101, г. Ростов-на-Дону, ул. Ленинградская, д. 7, пом. № П-13, Лицензия № 1904067009295, ИНН 9201526872, ОГРН 1189204008564, процентная ставка 0% в день</a> <br></li> 
+					<li><a class="footer-steps-spoiler__item-link" href="">ООО МКК "Киберлэндинг", 420043, г. Казань, ул. Достоевского, д. 52, оф. 3, Лицензия № 1803392008777, ИНН 1659182700, ОГРН 1171690064920, процентная ставка 0% в день</a> <br></li> 
+					<li><a class="footer-steps-spoiler__item-link" href="">ООО МКК "Кредиттер", 115280, г. Москва, ул. Ленинская Слобода, д. 19, стр. 6, ком. 6, 7, Лицензия № 1903045009373, ИНН 7702463482, ОГРН 1197746100530, процентная ставка 0,99% в день</a> <br></li> 
+					<li><a class="footer-steps-spoiler__item-link" href="">ООО МФК "Лайм-Займ", 630102, г. Новосибирск, ул. Кирова, д. 48, оф. 1401, </a> </li> 
+				</ul>
+				<ul class="footer-steps-spoiler__item">
+					<li><a class="footer-steps-spoiler__item-download _icon-downloud" href="">Публичная оферта и действующие тарифы</a></li>
+					<li><a class="footer-steps-spoiler__item-download _icon-downloud" href="">Соглашения с подпиской</a></li>
+					<li><a class="footer-steps-spoiler__item-download _icon-downloud" href="">Согласие на орбработку персональных данных</a></li>
+					<li><a class="footer-steps-spoiler__item-download _icon-downloud" href="">Политика обработки персональных данных</a></li>
+					<li><a class="footer-steps-spoiler__item-download _icon-downloud" href="">Соглашения о хранение учетных данных владельца</a></li>
+				</ul>
+			</div>
+			<div class="footer-steps__info">
+				<div class="footer-steps-info__item">
+					<p>FireMoney, Быстрая финансовая помощь</p>
+				</div>
+				<div class="footer-steps-info__item">
+					<p>Imoneys Сredit © 2015–2022 Все права на сайт защищены.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script type="module" src="js/steps_1.js"></script>
+	<script src="https://unpkg.com/imask"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+	
+</body>
+</html>

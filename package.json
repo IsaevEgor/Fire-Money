@@ -16,5 +16,8 @@
 		"gulp-concat": "^2.6.1",
 		"gulp-less": "^4.0.1",
 		"less-plugin-autoprefix": "^2.0.0"
+	},
+	"dependencies": {
+		"imask": "^6.4.2"
 	}
 }

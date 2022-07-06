@@ -9,11 +9,12 @@ function resizeWindow() {
 	const footerMain = document.getElementById("footerMain");
 	const footerMenu = document.getElementById("footerMenu");
 	const footerLogo = document.getElementById("footerLogo");
-	
+	const stepsHeaderButton =document.getElementById("stepsHeaderButton");
 
 
 	if (clientWidth <= 992 && resizeTablet) {
 		headerButton.innerHTML = "вход в кабинет";
+		stepsHeaderButton.innerHTML = "вход в кабинет";
 		footerMain.insertAdjacentHTML("afterEnd", footerMenu.outerHTML);
 		footerMenu.outerHTML = "";
 
@@ -52,7 +53,7 @@ function showBurger() {
 
 
       const sliderMoney = document.getElementById("sliderMoney");
-      sliderMoney.oninput = (()=>{
+    	sliderMoney.oninput = (()=>{
 		const valueMoney = document.getElementById("valueMoney");
 		const progressbar = document.getElementById("progressbar");
         let value = sliderMoney.value;
@@ -156,3 +157,5 @@ function showBurger() {
 	  }
 	  
 	  document.querySelectorAll('.rating').forEach(dom => new Rating(dom));
+
+	

@@ -8,22 +8,12 @@ export function rangeMoney() {
 		let value = sliderMoney.value;
 		progressbar.style.width = value / 1000 + "%"
 		valueMoney.style.left = (value/1000) + "%";
-		if (screenWidth > 767) {
-			if ((value/1000) <= 25) {
-				valueMoney.style.left = 25 + "%"
-			} if ((value/1000) > 8) {
-				valueMoney.style.left = (value/1000) + 15 + "%";
-			} if ((value/1000) > 89) {
-				valueMoney.style.left = 105 + "%"
-			}
-		} else {
-			if ((value/1000) <= 28) {
-				valueMoney.style.left = 30 + "%"
-			} if ((value/1000) > 10) {
-				valueMoney.style.left = (value/1000) + 22 + "%";
-			} if ((value/1000) > 89) {
-				valueMoney.style.left = 105 + "%"
-			}
+		if ((value/1000) <= 25) {
+			valueMoney.style.left = 25 + "%"
+		} if ((value/1000) > 8) {
+			valueMoney.style.left = (value/1000) + 15 + "%";
+		} if ((value/1000) > 89) {
+			valueMoney.style.left = 105 + "%"
 		}
 
 	value = Math.floor(value/ 1000)

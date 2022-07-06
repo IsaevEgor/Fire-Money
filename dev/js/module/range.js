@@ -1,19 +1,31 @@
 export function rangeMoney() {
+	const screenWidth = window.screen.width;
 
 	const sliderMoney = document.getElementById("sliderMoney");
 	sliderMoney.oninput = (()=>{
-	const valueMoney = document.getElementById("valueMoney");
-	const progressbar = document.getElementById("progressbar");
-	let value = sliderMoney.value;
-	progressbar.style.width = value / 1000 + "%"
-	valueMoney.style.left = (value/1000) + "%";
-	if ((value/1000) <= 25) {
-		valueMoney.style.left = 25 + "%"
-	} if ((value/1000) > 8) {
-		valueMoney.style.left = (value/1000) + 15 + "%";
-	} if ((value/1000) > 89) {
-		valueMoney.style.left = 105 + "%"
-	}
+		const valueMoney = document.getElementById("valueMoney");
+		const progressbar = document.getElementById("progressbar");
+		let value = sliderMoney.value;
+		progressbar.style.width = value / 1000 + "%"
+		valueMoney.style.left = (value/1000) + "%";
+		if (screenWidth > 767) {
+			if ((value/1000) <= 25) {
+				valueMoney.style.left = 25 + "%"
+			} if ((value/1000) > 8) {
+				valueMoney.style.left = (value/1000) + 15 + "%";
+			} if ((value/1000) > 89) {
+				valueMoney.style.left = 105 + "%"
+			}
+		} else {
+			if ((value/1000) <= 28) {
+				valueMoney.style.left = 30 + "%"
+			} if ((value/1000) > 10) {
+				valueMoney.style.left = (value/1000) + 22 + "%";
+			} if ((value/1000) > 89) {
+				valueMoney.style.left = 105 + "%"
+			}
+		}
+
 	value = Math.floor(value/ 1000)
 	valueMoney.innerHTML = value * 1000 + " ₽";
 	valueMoney.classList.add("show");
@@ -21,39 +33,58 @@ export function rangeMoney() {
 	creditСalculationSum();
 	});
 	sliderMoney.onblur = (()=>{
-	valueMoney.classList.remove("show");
+		valueMoney.classList.remove("show");
 	});
 }
 
 export function rangetime() {
-	const sliderTime = document.getElementById("sliderTime");
-sliderTime.oninput = (()=>{
-  const valueTime = document.getElementById("valueTime");
-  const progressbar = document.getElementById("progressbarTime");
-  let time = sliderTime.value;
-  progressbar.style.width = time * 2.9 + "%"
-  valueTime.style.left = time * 3.7 + "%";
-  if (time <= 8) {
-	  progressbar.style.width = time * 2.35 + "%"
-  } if (time <= 4) {
-	  progressbar.style.width = time * 1.8 + "%"
-  } if (time > 15) {
-	  progressbar.style.width = time * 3.2 + "%"
-  } if (time > 89) {
-	  valueTime.style.left = 105 + "%"
-  } if (time <= 6) {
-	  valueTime.style.left = 24 + "%";
-  } if (time >= 28) {
-	  valueTime.style.left = 105 + "%";
-  }
-  valueTime.innerHTML = time + " дней";
-  valueTime.classList.add("show");
+	const screenWidth = window.screen.width;
 
-  creditСalculationSum();
-});
-sliderTime.onblur = (()=>{
-  valueTime.classList.remove("show");
-});
+	const sliderTime = document.getElementById("sliderTime");
+	sliderTime.oninput = (()=>{
+	  const valueTime = document.getElementById("valueTime");
+	  const progressbar = document.getElementById("progressbarTime");
+	  let time = sliderTime.value;
+	  progressbar.style.width = time * 2.9 + "%"
+	  valueTime.style.left = time * 3.7 + "%";
+	  if (screenWidth > 400){
+			if (time <= 8) {
+			  progressbar.style.width = time * 2.35 + "%"
+		  	} if (time <= 4) {
+			  progressbar.style.width = time * 1.8 + "%"
+		  	} if (time > 15) {
+			  progressbar.style.width = time * 3.2 + "%"
+		  	} if (time > 89) {
+			  valueTime.style.left = 105 + "%"
+		  	} if (time <= 6) {
+			  valueTime.style.left = 24 + "%";
+		  	} if (time >= 28) {
+			  valueTime.style.left = 105 + "%";
+		  }
+	  } else {
+			if (time <= 8) {
+				progressbar.style.width = time * 2.35 + "%"
+			} if (time <= 4) {
+				progressbar.style.width = time * 1.8 + "%"
+			} if (time > 15) {
+				progressbar.style.width = time * 3.2 + "%"
+			} if (time > 89) {
+				valueTime.style.left = 105 + "%"
+			} if (time <= 8) {
+				valueTime.style.left = 34 + "%";
+			} if (time >= 28) {
+				valueTime.style.left = 10 + "%";
+		}
+	  }
+
+	  valueTime.innerHTML = time + " дней";
+	  valueTime.classList.add("show");
+
+	  creditСalculationSum();
+	});
+	sliderTime.onblur = (()=>{
+	  valueTime.classList.remove("show");
+	});
 }
 
 export function creditСalculationSum() {

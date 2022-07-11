@@ -232,6 +232,7 @@ body{
 }
 .step-1__date-block{
 	position: relative;
+	
 }
 .step-1__date-block::after{
 	content: url(../img/steps_container/step_1/calendar.svg);
@@ -263,6 +264,9 @@ select{
 	line-height: 118%;
 	color: #45515F;
 }	
+.flatpickr-input{
+	text-align: center;
+}
 input[type=tel]{
 	background-image: url(../img/steps_container/step_1/tel.svg);
 	background-repeat: no-repeat;
@@ -283,11 +287,11 @@ input[type=tel]{
 	.select.is-active .select__body {
 		display: block;
 	}
-	.select.is-active .select__header{
+	.select.is-active .step-1__select__header{
 		border: 1px solid #FF7B00;
 		border-radius: 8px;
 	}
-	.select__header {
+	.step-1__select__header {
 		position: relative;
 		height: 45px;
 		border: 1px solid #D3DAE2;
@@ -296,7 +300,7 @@ input[type=tel]{
 		cursor: pointer;
 		display: flex;
 	}
-	.select__header::before{
+	.step-1__select__header::before{
 		content: url(../img/steps_container/step_1/city.svg);
 		position: absolute;
 		left: 15px;
@@ -304,7 +308,7 @@ input[type=tel]{
 		padding-right: 15px;
 		border-right: 1px solid #EAEAEA;
 	}
-	.select__header::after{
+	.step-1__select__header::after{
 		content: url(../img/steps_container/step_1/arrow.svg);
 		position: absolute;
 		top: 10px;
@@ -334,7 +338,7 @@ input[type=tel]{
 		right: 0;
 		top: 100%;
 	}
-	.select__item {
+	.step-1__select__item{
 		background-color: #FFFFFF;
 		border-radius: 0;
 		cursor: pointer;
@@ -347,11 +351,11 @@ input[type=tel]{
 		
 		color: #45515F;
 	}
-	.select__item:not(:last-child){
+	.step-1__select__item:not(:last-child){
 		margin-right: 0;
 	}
 	
-	.select__item:hover {
+	.step-1__select__item:hover {
 		background-color: #f2f2f2;
 	}
 
@@ -373,7 +377,7 @@ input[type=tel]{
 		}
 	}
 
-input[type="checkbox"]{
+.step-1__checkbox{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -386,17 +390,17 @@ input[type="checkbox"]{
 	margin-right: 15px;
 
 }
-input[type="checkbox"]::after{
+.step-1__checkbox::after{
 	content: url(../img/steps_container/step_1/checkbox.svg);
 	display: none;
 }
-input[type="checkbox"]:hover{
+.step-1__checkbox:hover{
 	background-color: #e5c697;
 }
-input[type="checkbox"]:checked{
+.step-1__checkbox:checked{
 	background: linear-gradient(81.55deg, #FFC83E 33.93%, #FF7347 73.78%);
 }
-input[type="checkbox"]:checked::after{
+.step-1__checkbox:checked::after{
 	display: block;
 }
 

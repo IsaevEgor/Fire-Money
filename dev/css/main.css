@@ -737,6 +737,7 @@
   }
 }
 .footer-steps__label {
+  position: relative;
   font-weight: 500;
   font-size: 18px;
   line-height: 118%;
@@ -757,33 +758,22 @@
     display: inline
   }
 }
-.footer-steps__label.active p::before {
-  top: 10px;
+.footer-steps__label.active::before {
+  top: -15px;
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg)
 }
-@media (max-width:525px) {
-  .footer-steps__label.active p::before {
-    top: -15px
-  }
-}
 ._icon-arrow:before {
   position: absolute;
-  top: 0;
-  right: -30px;
+  top: -5px;
+  right: -25px;
   -webkit-transition: .3s ease;
   transition: .3s ease
 }
 @media (max-width:992px) {
   ._icon-arrow:before {
-    right: -30px;
-    top: -5px
-  }
-}
-@media (max-width:525px) {
-  ._icon-arrow:before {
-    top: -25px;
-    right: 50%
+    right: 50%;
+    top: -25px
   }
 }
 .footer-steps__conact-link {
@@ -1950,7 +1940,7 @@ h6 {
   font-weight: inherit;
   font-size: inherit
 }
-.offer__container {
+.offer__container_ {
   position: relative;
   top: 158px;
   height: 642px;
@@ -1961,19 +1951,22 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between
 }
 @media (max-width:1250px) {
-  .offer__container {
+  .offer__container_ {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     top: 123px
   }
 }
 @media (max-width:767px) {
-  .offer__container {
+  .offer__container_ {
     top: 70px
   }
 }
@@ -2878,6 +2871,9 @@ select {
   line-height: 118%;
   color: #45515f
 }
+.flatpickr-input {
+  text-align: center
+}
 input[type=tel] {
   background-image: url(../img/steps_container/step_1/tel.svg);
   background-repeat: no-repeat;
@@ -2896,11 +2892,11 @@ input[type=text]:focus {
 .select.is-active .select__body {
   display: block
 }
-.select.is-active .select__header {
+.select.is-active .step-1__select__header {
   border: 1px solid #ff7b00;
   border-radius: 8px
 }
-.select__header {
+.step-1__select__header {
   position: relative;
   height: 45px;
   border: 1px solid #d3dae2;
@@ -2911,7 +2907,7 @@ input[type=text]:focus {
   display: -ms-flexbox;
   display: flex
 }
-.select__header::before {
+.step-1__select__header::before {
   content: url(../img/steps_container/step_1/city.svg);
   position: absolute;
   left: 15px;
@@ -2919,7 +2915,7 @@ input[type=text]:focus {
   padding-right: 15px;
   border-right: 1px solid #eaeaea
 }
-.select__header::after {
+.step-1__select__header::after {
   content: url(../img/steps_container/step_1/arrow.svg);
   position: absolute;
   top: 10px;
@@ -2951,7 +2947,7 @@ input[type=text]:focus {
   right: 0;
   top: 100%
 }
-.select__item {
+.step-1__select__item {
   background-color: #fff;
   border-radius: 0;
   cursor: pointer;
@@ -2962,10 +2958,10 @@ input[type=text]:focus {
   line-height: 15px;
   color: #45515f
 }
-.select__item:not(:last-child) {
+.step-1__select__item:not(:last-child) {
   margin-right: 0
 }
-.select__item:hover {
+.step-1__select__item:hover {
   background-color: #f2f2f2
 }
 .step-1__checkbox-block {
@@ -2988,7 +2984,7 @@ input[type=text]:focus {
 .step-1__checkbox-block label a:hover {
   text-decoration: underline
 }
-input[type=checkbox] {
+.step-1__checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3008,17 +3004,17 @@ input[type=checkbox] {
   cursor: pointer;
   margin-right: 15px
 }
-input[type=checkbox]::after {
+.step-1__checkbox::after {
   content: url(../img/steps_container/step_1/checkbox.svg);
   display: none
 }
-input[type=checkbox]:hover {
+.step-1__checkbox:hover {
   background-color: #e5c697
 }
-input[type=checkbox]:checked {
+.step-1__checkbox:checked {
   background: linear-gradient(81.55deg,#ffc83e 33.93%,#ff7347 73.78%)
 }
-input[type=checkbox]:checked::after {
+.step-1__checkbox:checked::after {
   display: block
 }
 .step__line {

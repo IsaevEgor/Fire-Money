@@ -24,6 +24,7 @@
 	}
 }
 .footer-steps__label{
+	position: relative;
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 118%;
@@ -43,26 +44,19 @@
 		}
 	}
 }
-.footer-steps__label.active p::before{
-	top: 10px;
+.footer-steps__label.active::before{
+	top: -15px;
 	transform: rotate(-180deg);
-	@media (max-width: 525px) {
-		top: -15px;
-	}
 }
 ._icon-arrow:before {
 	position: absolute;
-	top: 0;
-	right: -30px;
+	top: -5px;
+	right: -25px;
 	transition: 0.3s ease;
 
 	@media (max-width: 992px) {
-		right: -30px;
-		top: -5px;
-	}
-	@media (max-width: 525px) {
-		top: -25px;
 		right: 50%;
+		top: -25px;
 	}
   }
 .footer-steps__conact-link {

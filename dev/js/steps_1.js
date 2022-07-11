@@ -145,8 +145,8 @@ flatpickr(dataMask, {
 
 /* Select */
 let select = function () {
-    let selectHeader = document.querySelectorAll('.select__header');
-    let selectItem = document.querySelectorAll('.select__item');
+    let selectHeader = document.querySelectorAll('.step-1__select__header');
+    let selectItem = document.querySelectorAll('.step-1__select__item');
 
     selectHeader.forEach(item => {
         item.addEventListener('click', selectToggle)

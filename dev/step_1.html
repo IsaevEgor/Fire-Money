@@ -23,12 +23,12 @@
 	</header>
 	<div class="steps">
 		<div class="steps__container">
-			<div class="step__1">
+			<div id="form1" class="step__1">
 			<div class="step-1__title">
 				Для получения займа под 0%* 
 				<span>заполните заявку</span>
 			</div>
-			<div class="step-1__body">
+			<div class="step-1__body body__step">
 				<div class="step-1__timer-block">
 					<div class="step-1__timer-title">
 						<p>Поторопитесь, до окончания акционного предложения осталось</p>
@@ -170,11 +170,103 @@
 						</div>
 					</div>
 	
-					<a href="#" class="step-line__button __button">
-						<p>Продолжить</p>
+					<a id="nextForm" class="step-line__button __button">
+						<p >Продолжить</p>
 					</a>
 				</div>
 			</div>
+			</div>
+			<div id="form2" class="step__2">
+				<div class="step-2__body body__step">
+					<div class="step-2__title">
+						<h3 class="title__steps">Ваша анкета сформирована</h3>
+						<p>Вероятность одобрения <span>50%</span></p>
+					</div>
+					<div class="step-2__line"></div>
+					<ul class="step-2__accordion-list">
+						<li class="step-2__accordion">
+							<button class="step-2__accordion-control">
+								<h4>Добавить паспорт</h4>
+								<span class="step-2__accordion-procent _necessarily _icon-arrow">20%</span>
+							</button>
+							<div id="content" class="step-2__accordion-content-list">
+								<div class="step-2__accordion-content-list-row">
+									<div class="step-2__accordion-content">
+										<label class="step-2__accordion-content-name">Серия</label>
+										<input type="text" class="step-2__accordion-content-input">
+									</div>
+									<div class="step-2__accordion-content">
+										<label class="step-2__accordion-content-name">Номер</label>
+										<input type="text" class="step-2__accordion-content-input">
+									</div>
+								</div>
+								<div class="step-2__accordion-content">
+									<label class="step-2__accordion-content-name">Место рождения</label>
+									<input type="text" class="step-2__accordion-content-input">
+								</div>
+								<div class="step-2__accordion-content">
+									<label class="step-2__accordion-content-name">Дата выдачи</label>
+									<input type="text" class="step-2__accordion-content-input">
+								</div>
+								<div class="step-2__accordion-content">
+									<label class="step-2__accordion-content-name">Код подтверждения </label>
+									<input type="text" class="step-2__accordion-content-input">
+								</div>
+							</div>
+						</li>
+						<li class="step-2__accordion">
+							<button class="step-2__accordion-control">
+								<h4>Добавить прописку</h4>
+								<span class="step-2__accordion-procent _icon-arrow">20%</span>
+							</button>
+							<div id="content" class="step-2__accordion-content-list">
+								<div class="step-2__accordion-content">
+									<label class="step-2__accordion-content-name">Введите адресс прописки</label>
+									<input type="text" class="step-2__accordion-content-input">
+								</div>
+							</div>
+						</li>
+						<li class="step-2__accordion">
+							<button class="step-2__accordion-control">
+								<h4>Добавить снилс</h4>
+								<span class="step-2__accordion-procent _necessarily _icon-arrow">10%</span>
+							</button>
+							<div id="content" class="step-2__accordion-content-list">
+								<div class="step-2__accordion-content">
+									<label class="step-2__accordion-content-name">Снилс</label>
+									<input type="text" class="step-2__accordion-content-input">
+								</div>
+							</div>
+						</li>
+						<li class="step-2__accordion">
+							<button class="step-2__accordion-control">
+								<h4>Добавить снилс</h4>
+								<span class="step-2__accordion-procent _necessarily _icon-arrow">5%</span>
+							</button>
+							<div id="content" class="step-2__accordion-content-list">
+								<div class="step-2__accordion-content">
+									<label class="step-2__accordion-content-name">Адресс электронной почты:</label>
+									<input type="email" class="step-2__accordion-content-input">
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="step-2__step step__line">
+						<div class="step-line__title">
+							Шаг <span>1</span> из <span>7</span>
+						</div>
+						<div class="step-line__line">
+							<img src="img/steps_container/step_1/line.jpg" alt="line">
+							<div class="step-line__text">
+								<p>+10% к одобрению при заполнении этой формы</p>
+							</div>
+						</div>
+		
+						<a href="#" class="step-line__button __button">
+							<p>Продолжить</p>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -221,6 +313,9 @@
 	</footer>
 
 	<script type="module" src="js/steps_1.js"></script>
+	<script type="module" src="js/step_2.js"></script>
+	<script type="module" src="js/show_steps.js"></script>
+
 	<script src="https://unpkg.com/imask"></script>
 	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 

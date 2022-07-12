@@ -173,3 +173,17 @@ let select = function () {
 
 select();
 /* Select */
+
+const nextForm = document.getElementById("nextForm");
+const form1Hidden = document.getElementById("form1");
+
+const form2Hidden = document.getElementById("form2");
+
+nextForm.addEventListener("click", function() {
+
+	console.log(form2Hidden.style.display)
+	if(form1Hidden.style.display === ""){
+		form1Hidden.style.display = "none"
+		form2Hidden.style.display = "block"
+	}
+});

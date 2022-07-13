@@ -262,7 +262,138 @@
 							</div>
 						</div>
 		
-						<a href="#" class="step-line__button __button">
+						<a id="nextForm" href="#" class="step-line__button __button">
+							<p>Продолжить</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="form3" class="step-3">
+				<div class="step-3__body body__step">
+					<div class="step-3__title">
+						<h3 class="title__steps">Иванов Иван ИваноВич </h3>
+						<p>Мы проверяем введенные вами данные</p>
+					</div>
+					<div class="steps-3__text">
+						<p>
+							Наши алгоритмы проверяют информацию введенную вами на предыдущих формах, 
+							это займет не более минуты. Пожалуйста не закрывайте страницу.
+						</p>
+					</div>
+					<div class="step-3__line"></div>
+					<div class="step-3__img">
+						<div class="img">
+							<img src="img/steps_container/step-3/img-center.png" alt="">
+						</div>
+					</div>
+					<div class="step-3__step step__line">
+						<div class="step-line__title">
+							Шаг <span>1</span> из <span>7</span>
+						</div>
+						<div class="step-line__line">
+							<img src="img/steps_container/step_1/line.jpg" alt="line">
+							<div class="step-line__text">
+								<p>+10% к одобрению при заполнении этой формы</p>
+							</div>
+						</div>
+						<a id="nextForm" href="#" class="step-line__button __button">
+							<p>Продолжить</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="form4" class="step-4">
+				<div class="step-4__body body__step">
+					<div class="step-4__title">
+						<h3 class="title__steps">Иванов Иван ИваноВич </h3>
+						<p>Ваша заявка отправлена</p>
+						<div class="step-4__line"></div>
+					</div>
+					<div class="step-4__text">
+						<p>
+							Необходимо активировать сервис.
+							Для продолжения вам необходимо активировать подписку. 
+							Укажите реквизиты вашей карты. 
+						</p>
+						<span>
+							Внимание! С вашей карты будет удержана сумма в 1 рубль <br>
+							для привязки карты и дальнейшей оплаты услуг. Услуга обработки заявки<br>
+							платная и составляет 99 до 303 руб. раз в 5 дней*
+						</span>
+					</div>
+					<div class="step-4__subtitle">
+						Безопасная оплата банковской картой 
+					</div>
+					<div class="step-4__form-list">
+						<div class="step-4__form-item">
+							<div class="step-4__form-input-block">
+								<label for="number-card" class="step-4__form-name">Номер карты</label>
+								<div class="step-4__form-info-block">
+									<input 
+									name="number-card" 
+									type="number" 
+									class="step-4__form-input">
+									<div class="step-4__form-info">?</div>	
+								</div>
+							</div>
+							<div class="step-4__form-input-block">
+								<label for="number-card" class="step-4__form-name">Срок действия</label>
+								<div class="step-4__form-input-flex">
+									<input
+										size="2"
+										name="number-card" 
+										type="number"
+										class="step-4__form-input-small">
+									<span>/</span>
+									<input
+										size="2"
+										name="number-card" 
+										type="number"
+										class="step-4__form-input-small">
+										<div class="step-4__form-info">?</div>
+								</div>
+								<div class="step-4__form-input-block">
+									<label for="number-card" class="step-4__form-name">Номер карты</label>
+									<div class="step-4__form-info-block">
+									<input 
+										name="number-card" 
+										type="number" 
+										class="step-4__form-input">
+									<div class="step-4__form-info">?</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="step-4__form-item-password">
+							<div class="step-4__form-opacity"></div>
+							<div class="step-4__form-input-block">
+								<label for="number-card" class="step-4__form-name">CVC/CVV</label>
+								<div class="step-4__form-info-block">
+								<input 
+								size="4"
+									name="number-card" 
+									type="number" 
+									class="step-4__form-input-password">
+								<div class="step-4__form-info">?</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+					<divc class="step-4__no-card">
+						<a href="#">Нет карты</a>
+					</divc>
+
+					<div class="step-4__step step__line">
+						<div class="step-line__title">
+							Шаг <span>1</span> из <span>7</span>
+						</div>
+						<div class="step-line__line">
+							<img src="img/steps_container/step_1/line.jpg" alt="line">
+							<div class="step-line__text">
+								<p>+10% к одобрению при заполнении этой формы</p>
+							</div>
+						</div>
+						<a id="nextForm" href="#" class="step-line__button __button">
 							<p>Продолжить</p>
 						</a>
 					</div>
@@ -315,10 +446,8 @@
 	<script type="module" src="js/steps_1.js"></script>
 	<script type="module" src="js/step_2.js"></script>
 	<script type="module" src="js/show_steps.js"></script>
-
 	<script src="https://unpkg.com/imask"></script>
 	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-	
 </body>
 </html>

@@ -174,16 +174,39 @@ let select = function () {
 select();
 /* Select */
 
-const nextForm = document.getElementById("nextForm");
+
+const nextForm = document.querySelectorAll(".step-line__button");
 const form1Hidden = document.getElementById("form1");
-
 const form2Hidden = document.getElementById("form2");
+const form3Hidden = document.getElementById("form3");
+const form4Hidden = document.getElementById("form4");
 
-nextForm.addEventListener("click", function() {
+for (let i = 0; i < nextForm.length; i++) {
+	nextForm[i].addEventListener("click", function() {
+		if(form1Hidden.style.display === ""){
+			form1Hidden.style.display = "none"
+			form2Hidden.style.display = "block"
+		} else if (form2Hidden.style.display == "block") {
+			form2Hidden.style.display = "none";
+			form3Hidden.style.display = "block";
+		} else if (form3Hidden.style.display == "block") {
+			form3Hidden.style.display = "none";
+			form4Hidden.style.display = "block";
+		}
+	});
 
-	console.log(form2Hidden.style.display)
-	if(form1Hidden.style.display === ""){
-		form1Hidden.style.display = "none"
-		form2Hidden.style.display = "block"
-	}
-});
+}
+
+
+const infoBtn = document.querySelectorAll(".step-4__form-info");
+console.log(infoBtn)
+for (let i = 0; i < infoBtn.length; i++) {
+	infoBtn[i].addEventListener("mouseover", function () {
+		infoBtn[i].classList.add("show-info");
+	});
+};
+for (let i = 0; i < infoBtn.length; i++) {
+	infoBtn[i].addEventListener("mouseout", function () {
+		infoBtn[i].classList.remove("show-info");
+	});
+};

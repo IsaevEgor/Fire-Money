@@ -57,7 +57,7 @@ footerSpoiler.addEventListener("click", function() {
 	}
 });
 
-//window.addEventListener("DOMContentLoaded", showTimer)
+window.addEventListener("DOMContentLoaded", showTimer)
 
 function showTimer() {
 	
@@ -180,6 +180,9 @@ const form1Hidden = document.getElementById("form1");
 const form2Hidden = document.getElementById("form2");
 const form3Hidden = document.getElementById("form3");
 const form4Hidden = document.getElementById("form4");
+const form5Hidden = document.getElementById("form5");
+const form6Hidden = document.getElementById("form6");
+const form7Hidden = document.getElementById("form7");
 
 for (let i = 0; i < nextForm.length; i++) {
 	nextForm[i].addEventListener("click", function() {
@@ -192,6 +195,15 @@ for (let i = 0; i < nextForm.length; i++) {
 		} else if (form3Hidden.style.display == "block") {
 			form3Hidden.style.display = "none";
 			form4Hidden.style.display = "block";
+		} else if (form4Hidden.style.display == "block") {
+			form4Hidden.style.display = "none";
+			form5Hidden.style.display = "block";
+		} else if (form5Hidden.style.display == "block") {
+			form5Hidden.style.display = "none";
+			form6Hidden.style.display = "block";
+		} else if (form6Hidden.style.display == "block") {
+			form6Hidden.style.display = "none";
+			form7Hidden.style.display = "block";
 		}
 	});
 

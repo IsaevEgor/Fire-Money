@@ -253,7 +253,7 @@
 					</ul>
 					<div class="step-2__step step__line">
 						<div class="step-line__title">
-							Шаг <span>1</span> из <span>7</span>
+							Шаг <span>2</span> из <span>7</span>
 						</div>
 						<div class="step-line__line">
 							<img src="img/steps_container/step_1/line.jpg" alt="line">
@@ -288,7 +288,7 @@
 					</div>
 					<div class="step-3__step step__line">
 						<div class="step-line__title">
-							Шаг <span>1</span> из <span>7</span>
+							Шаг <span>3</span> из <span>7</span>
 						</div>
 						<div class="step-line__line">
 							<img src="img/steps_container/step_1/line.jpg" alt="line">
@@ -330,8 +330,8 @@
 								<label for="number-card" class="step-4__form-name">Номер карты</label>
 								<div class="step-4__form-info-block">
 									<input 
+									maxlength="16"
 									name="number-card" 
-									type="number" 
 									class="step-4__form-input">
 									<div class="step-4__form-info">?</div>	
 								</div>
@@ -340,15 +340,13 @@
 								<label for="number-card" class="step-4__form-name">Срок действия</label>
 								<div class="step-4__form-input-flex">
 									<input
-										size="2"
+										maxlength="2"
 										name="number-card" 
-										type="number"
 										class="step-4__form-input-small">
 									<span>/</span>
 									<input
-										size="2"
+										maxlength="2"
 										name="number-card" 
-										type="number"
 										class="step-4__form-input-small">
 										<div class="step-4__form-info">?</div>
 								</div>
@@ -357,7 +355,6 @@
 									<div class="step-4__form-info-block">
 									<input 
 										name="number-card" 
-										type="number" 
 										class="step-4__form-input">
 									<div class="step-4__form-info">?</div>
 									</div>
@@ -370,9 +367,8 @@
 								<label for="number-card" class="step-4__form-name">CVC/CVV</label>
 								<div class="step-4__form-info-block">
 								<input 
-								size="4"
+								maxlength="4"
 									name="number-card" 
-									type="number" 
 									class="step-4__form-input-password">
 								<div class="step-4__form-info">?</div>	
 								</div>
@@ -385,7 +381,7 @@
 
 					<div class="step-4__step step__line">
 						<div class="step-line__title">
-							Шаг <span>1</span> из <span>7</span>
+							Шаг <span>4</span> из <span>7</span>
 						</div>
 						<div class="step-line__line">
 							<img src="img/steps_container/step_1/line.jpg" alt="line">
@@ -396,6 +392,296 @@
 						<a id="nextForm" href="#" class="step-line__button __button">
 							<p>Продолжить</p>
 						</a>
+					</div>
+				</div>
+			</div>
+			<div id="form5" class="step-5">
+				<div class="step-5__body body__step">
+					<div class="step-5__title">
+						<h3>Введите код подтверждения из SMS</h3>
+					</div>
+					<div class="step-5__line"></div>
+					<input
+						type="text"
+						maxlength="8"
+						placeholder="Код подтверждения из SMS"
+						class="step-5__input-sms">
+					<p class="step-5__repiat">
+						Запросить код повторно можночерез 
+						<span id="repeatSMS">42 сек.</span>
+					</p>
+					<div class="step-5__step step__line">
+						<div class="step-line__title">
+							Шаг <span>5</span> из <span>7</span>
+						</div>
+						<div class="step-line__line">
+							<img src="img/steps_container/step_1/line.jpg" alt="line">
+							<div class="step-line__text">
+								<p>+10% к одобрению при заполнении этой формы</p>
+							</div>
+						</div>
+						<a id="nextForm" href="#" class="step-line__button __button">
+							<p>Продолжить</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="form6" class="step-6">
+				<div class="step-6__body body__step">
+					<div class="step-6__title-block">
+						<h3 class="step-6__title">Иванов Иван ИваноВик </h3>
+						<p class="step-6__title-text">Выберете МФО в которых вы оставляли заявку за все время.</p>
+						<div class="step-6__line"></div>
+						<p class="step-6__text">Это увеличит шанс получения займа многократно, а мы подберем лучшие условия.</p>
+					</div>
+					<div class="step-6__grid grid__block">
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+						<div class="grid__item">
+							<div class="grid__title">
+								<h5>WEBBANKIR</h5>
+							</div>
+							<p class="grid__name">
+								WEBBANKIR
+							</p>
+							<input
+							type="checkbox" 
+							class="grid__checkbox">
+						</div>
+					</div>
+					<div class="step-6__title-ways">
+						Способы получения
+					</div>
+					<ul class="step-6__list">
+						<li class="ways__item ways__item-first"><a href="#"></a></li>
+						<li class="ways__item ways__item-secind"><a href="#"></a></li>
+						<li class="ways__item ways__item-third"><a href="#"></a></li>
+						<li class="ways__item ways__item-fourth"><a href="#"></a></li>
+						<li class="ways__item ways__item-fift"><a href="#"></a></li>
+					</ul>
+					<div class="step-5__step step__line">
+						<div class="step-line__title">
+							Шаг <span>6</span> из <span>7</span>
+						</div>
+						<div class="step-line__line">
+							<img src="img/steps_container/step_1/line.jpg" alt="line">
+							<div class="step-line__text">
+								<p>+10% к одобрению при заполнении этой формы</p>
+							</div>
+						</div>
+						<a id="nextForm" href="#" class="step-line__button __button">
+							<p>Продолжить</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="form7" class="step-7">
+				<div class="step-7__body body__step">
+					<div class="step-7__title">
+						<h3>Иванов Иван ИваноВик </h3>
+						<p class="step-7__text">
+							Ваше кредитное предложение формируется, осталось совсем чуть-чуть.
+						</p>
+					</div>
+					<div class="step-7__line"></div>
+					<div class="step-7__img">
+						<img src="img/steps_container/step-7/img.svg" alt="">
+					</div>
+					<div class="step-7__step step__line">
+						<div class="step-line__title">
+							Шаг <span>7</span> из <span>7</span>
+						</div>
+						<div class="step-line__line">
+							<img src="img/steps_container/step_1/line.jpg" alt="line">
+							<div class="step-line__text">
+								<p>+10% к одобрению при заполнении этой формы</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

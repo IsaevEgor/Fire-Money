@@ -9,12 +9,10 @@ function resizeWindow() {
 	const footerMain = document.getElementById("footerMain");
 	const footerMenu = document.getElementById("footerMenu");
 	const footerLogo = document.getElementById("footerLogo");
-	const stepsHeaderButton =document.getElementById("stepsHeaderButton");
 
 
 	if (clientWidth <= 992 && resizeTablet) {
 		headerButton.innerHTML = "вход в кабинет";
-		stepsHeaderButton.innerHTML = "вход в кабинет";
 		footerMain.insertAdjacentHTML("afterEnd", footerMenu.outerHTML);
 		footerMenu.outerHTML = "";
 

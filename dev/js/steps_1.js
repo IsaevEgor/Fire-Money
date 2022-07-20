@@ -211,7 +211,7 @@ for (let i = 0; i < nextForm.length; i++) {
 
 
 const infoBtn = document.querySelectorAll(".step-4__form-info");
-console.log(infoBtn)
+
 for (let i = 0; i < infoBtn.length; i++) {
 	infoBtn[i].addEventListener("mouseover", function () {
 		infoBtn[i].classList.add("show-info");
@@ -222,3 +222,4 @@ for (let i = 0; i < infoBtn.length; i++) {
 		infoBtn[i].classList.remove("show-info");
 	});
 };
+

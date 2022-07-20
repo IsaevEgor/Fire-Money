@@ -1747,6 +1747,66 @@ body.active {
   transform: rotate(-45deg);
   top: 0
 }
+.history__container {
+  padding: 0 15px;
+  margin: 0 auto
+}
+.history__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.history__title h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 118%;
+  color: #45515f
+}
+.history__title span {
+  color: #ff7b00
+}
+.history__close {
+  padding: 10px;
+  border-radius: 5px
+}
+.history__close::before {
+  color: #ff7347
+}
+.history__close:hover {
+  background-color: #ff72474b
+}
+.history__row {
+  padding: 25px 0
+}
+.history__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 15px
+}
+.history__date {
+  font-size: 16px;
+  line-height: 118%;
+  color: #45515f
+}
+.history__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 118%;
+  color: #45515f
+}
 @font-face {
   font-family: icons;
   src: url(../fonts/icons.eot?9yydpp);
@@ -1787,6 +1847,96 @@ body.active {
 }
 ._icon-cross:before {
   content: "\ea0f"
+}
+.login {
+  font-family: Rubik
+}
+.login__container {
+  max-width: 1310px;
+  padding: 15px 0;
+  margin: 0 auto
+}
+.login__logo {
+  max-width: 300px;
+  margin: 0 auto;
+  height: 60px;
+  margin-bottom: 45px
+}
+.login__title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #45515f;
+  margin-bottom: 30px
+}
+.login__form {
+  width: 580px;
+  padding: 50px 70px;
+  -webkit-filter: drop-shadow(0 4px 44px rgba(130, 141, 150, .15));
+  filter: drop-shadow(0 4px 44px rgba(130, 141, 150, .15));
+  border-radius: 22px;
+  border: 4px solid #ff7b00;
+  margin-bottom: 41px
+}
+.login__subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 118%;
+  text-align: center;
+  color: #45515f;
+  margin-bottom: 12px
+}
+.login__input {
+  margin-bottom: 30px
+}
+.login__input-name {
+  padding-left: 50px;
+  position: relative;
+  margin-bottom: 30px;
+  background-image: url(../img/login/icon.svg);
+  background-position: 10px;
+  background-repeat: no-repeat
+}
+.login__button {
+  display: block;
+  margin: 0 auto
+}
+.login__contact-block {
+  text-align: center
+}
+.login__contact-tel {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 118%;
+  color: #45515f;
+  margin-bottom: 23px
+}
+.login__contact-tel a {
+  position: relative
+}
+.login__contact-tel a::before {
+  content: url(../img/steps_container/step_1/tel.svg);
+  position: absolute;
+  top: 2px;
+  left: -30px
+}
+.login__contact-mail {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 118%;
+  color: #45515f;
+  margin-bottom: 30px
+}
+.login__contact-mail a {
+  position: relative
+}
+.login__contact-mail a::before {
+  content: url(../img/login/mail.svg);
+  position: absolute;
+  top: 0;
+  left: -30px
 }
 .now {
   cursor: default
@@ -3613,10 +3763,11 @@ select {
   position: relative;
   width: 100%;
   padding: 14px 12px;
+  padding-left: 30px;
   border: 1px solid #d3dae2;
   border-radius: 8px;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 118%;
   color: #45515f
 }

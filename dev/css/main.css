@@ -3881,8 +3881,11 @@ input[type=text]:focus {
   line-height: 118%;
   color: #45515f
 }
-.step-1__checkbox-block label a:hover {
+.step-1__checkbox-block label a {
   text-decoration: underline
+}
+.step-1__checkbox-block label a:hover {
+  text-decoration: none
 }
 .step-1__checkbox {
   display: -webkit-box;
@@ -4445,6 +4448,13 @@ input[type=text]:focus {
   line-height: 118%;
   color: #45515f
 }
+@media (max-width:767px) {
+  .step-4__form-input-flex {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+}
 .step-4__form-info-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4452,6 +4462,13 @@ input[type=text]:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center
+}
+@media (max-width:767px) {
+  .step-4__form-info-block {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
 }
 .step-4__form-info {
   cursor: pointer;
@@ -4494,6 +4511,12 @@ input[type=text]:focus {
   line-height: 118%;
   color: #45515f;
   border-radius: 15px 15px 15px 0
+}
+@media (max-width:767px) {
+  .step-4 .show-info::before {
+    left: -200px;
+    border-radius: 15px 15px 0 15px
+  }
 }
 .step-4__form-input {
   -webkit-box-flex: 1;

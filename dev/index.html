@@ -4,10 +4,21 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500,600,700" rel="stylesheet" />
 	<title>Готовые работы</title>
 	<style>
 		body{
-			background-color:azure;
+			font-family: Roboto;
+			background-color:rgb(172, 231, 231);
+		}
+		h1{
+			text-align: center;
+			font-weight: 500;
+
+		}
+		p{
+			font-size: 20px;
+			font-weight: 500;
 		}
 		.container{
 			max-width: 1310px;
@@ -22,16 +33,28 @@
 		li{
 			font-weight: 600;
 			font-size: 16px;
-			line-height: 103.57%;
+			line-height: 153.57%;
 			color: #000000;
 
+		}
+		a{
+			text-decoration: none;
+			color: blueviolet;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		.contact-block{
+			font-size: 26px;
+			font-weight: 700;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<h1>Здравствуйте!</h1>
+		<h1>Добрый день! <br> Спасибо за заказ!</h1>
 		<p>На этой странице вы можете увидеть результаты работы над вашим проектом</p>
+		<h2>Готовые страницы:</h2>
 		<div class="list-block">
 			<ol>
 				<li>
@@ -52,7 +75,7 @@
 			</ol>	
 		</div>
 
-		<h2>Формы</h2>
+		<h2>Формы:</h2>
 		<div class="list-block">
 			<ol id="steps" class="steps">
 				<li>
@@ -78,6 +101,14 @@
 				</li>
 			</ol>
 		</div>
+	</div>
+	<p>Буду рад хорошему отзыву!</p>
+	<div class="contact-block">
+		Связаться со мной:
+		<ul class="contact-list">
+			<li class="contact-item"><a href="mailto:isaevegor.work@gmail.com">isaevegor.work@gmail.com</a></li>
+			<li class="contact-item"><a href="https://vk.com/id68402157">ВКотнакте</a></li>
+		</ul>
 	</div>
 
 	<script src="js/show-step.js"></script>
